@@ -1,14 +1,18 @@
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String text;
-  final bool menu;
+  bool menu;
+  bool setting;
   Color? color;
   double fontsize;
   FontWeight? fontweight;
 
   CustomAppBar({
     super.key,
+    this.setting = false,
     required this.text,
     required this.menu,
     this.fontsize = 25,
@@ -38,25 +42,18 @@ class CustomAppBar extends StatelessWidget {
             ),
             Row(
               children: [
-                const CircleAvatar(
-                  backgroundColor: Color.fromARGB(255, 231, 226, 226),
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.black,
-                    size: 25,
-                  ),
-                ),
+                setting ? IconComp(icon: Icons.settings) : Container(),
+
+                // spacing
+                setting ? const SizedBox(width: 10) : Container(),
+
+                // search icon button
+                IconComp(icon: Icons.search),
+
                 const SizedBox(width: 8),
-                menu
-                    ? const CircleAvatar(
-                        backgroundColor: Color.fromARGB(255, 231, 226, 226),
-                        child: Icon(
-                          Icons.menu,
-                          color: Colors.black,
-                          size: 25,
-                        ),
-                      )
-                    : const Text(""),
+
+                // menu icon button
+                menu ? IconComp(icon: Icons.menu) : Container(),
               ],
             )
           ],
@@ -64,4 +61,13 @@ class CustomAppBar extends StatelessWidget {
       ),
     );
   }
+
+  Widget IconComp({required IconData icon}) => CircleAvatar(
+        backgroundColor: const Color.fromARGB(255, 231, 226, 226),
+        child: Icon(
+          icon,
+          color: Colors.black,
+          size: 25,
+        ),
+      );
 }
