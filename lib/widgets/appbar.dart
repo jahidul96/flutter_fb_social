@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final String title;
+  final String text;
   final bool menu;
+  Color? color;
+  double fontsize;
+  FontWeight? fontweight;
 
-  const CustomAppBar({
+  CustomAppBar({
     super.key,
-    required this.title,
+    required this.text,
     required this.menu,
+    this.fontsize = 25,
+    this.fontweight,
+    this.color = Colors.black,
   });
 
   @override
@@ -22,10 +28,10 @@ class CustomAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              title,
-              style: const TextStyle(
-                color: Colors.blue,
-                fontSize: 30,
+              text,
+              style: TextStyle(
+                color: color,
+                fontSize: fontsize,
                 fontWeight: FontWeight.bold,
                 letterSpacing: -0.6,
               ),

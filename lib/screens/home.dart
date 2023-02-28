@@ -26,9 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const CustomAppBar(
-              title: "facebook",
+            CustomAppBar(
+              text: "facebook",
               menu: true,
+              color: Colors.blue,
+              fontsize: 28,
             ),
             Expanded(
               child: SingleChildScrollView(

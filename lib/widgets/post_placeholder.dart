@@ -71,6 +71,7 @@ class PostPlaceholder extends StatelessWidget {
                           Icon(
                             Icons.video_call,
                             size: 22,
+                            color: Colors.blueAccent,
                           ),
                           SizedBox(width: 4),
                           Text("Room"),
@@ -81,6 +82,7 @@ class PostPlaceholder extends StatelessWidget {
                           Icon(
                             Icons.video_camera_front,
                             size: 20,
+                            color: Colors.red,
                           ),
                           SizedBox(width: 4),
                           Text("Live"),
@@ -91,6 +93,7 @@ class PostPlaceholder extends StatelessWidget {
                           Icon(
                             Icons.place,
                             size: 20,
+                            color: Colors.redAccent,
                           ),
                           SizedBox(width: 4),
                           Text("location"),
