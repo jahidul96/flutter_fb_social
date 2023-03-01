@@ -42,48 +42,48 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              size: 25,
+              size: 30,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.group,
-              size: 25,
+              size: 30,
             ),
             label: 'Friend',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.send,
+              Icons.chat,
               size: 25,
             ),
             label: 'Chat',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.notification_add,
-              size: 25,
+              Icons.notifications_none,
+              size: 28,
             ),
             label: 'Notification',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.live_tv,
-              size: 25,
+              size: 28,
             ),
             label: 'Video',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_bag,
-              size: 25,
+              size: 28,
             ),
             label: 'Shop',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
         showUnselectedLabels: false,
