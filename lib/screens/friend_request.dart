@@ -75,7 +75,10 @@ class _FriendRequestScreenState extends State<FriendRequestScreen> {
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: CustomeButton(text: "See All"),
+                  child: CustomeButton(
+                    text: "See All",
+                    backgroundColor: Colors.grey.shade200,
+                  ),
                 ),
 
                 const SizedBox(height: 20),

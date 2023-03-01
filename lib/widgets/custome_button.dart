@@ -5,7 +5,13 @@ import 'package:social_flutter/utils/app_color.dart';
 
 class CustomeButton extends StatelessWidget {
   String text;
-  CustomeButton({super.key, required this.text});
+  Color backgroundColor;
+  FontWeight weight;
+  CustomeButton(
+      {super.key,
+      required this.text,
+      this.backgroundColor = Colors.white,
+      this.weight = FontWeight.bold});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +21,14 @@ class CustomeButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           text,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: weight,
+          ),
         ),
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-            Colors.grey.shade200,
+            backgroundColor,
           ),
           elevation: MaterialStateProperty.all(0),
         ),

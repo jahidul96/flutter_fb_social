@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:social_flutter/utils/files.dart';
+import 'package:social_flutter/models/post_model.dart';
 import 'package:social_flutter/widgets/text_comp.dart';
 
-Widget chatprofile() => Container(
+Widget chatprofile({required PostModel data}) => Container(
       width: double.infinity,
       color: Colors.white,
-      padding: const EdgeInsets.only(bottom: 10),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -18,9 +17,10 @@ Widget chatprofile() => Container(
                 ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.network(
-                    personimg,
+                    data.profileimg,
                     width: 55,
                     height: 55,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Container(
@@ -32,7 +32,7 @@ Widget chatprofile() => Container(
                   ),
                   child: Center(
                     child: TextComp(
-                      text: "2h",
+                      text: data.postedAt,
                       size: 13,
                       color: Colors.greenAccent,
                     ),
@@ -48,7 +48,7 @@ Widget chatprofile() => Container(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TextComp(
-                        text: "Akash",
+                        text: data.name,
                         size: 16,
                       ),
                       const SizedBox(height: 3),

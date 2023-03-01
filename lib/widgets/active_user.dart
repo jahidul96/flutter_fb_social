@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter/models/post_model.dart';
 import 'package:social_flutter/utils/app_color.dart';
-import 'package:social_flutter/utils/files.dart';
 import 'package:social_flutter/widgets/text_comp.dart';
 
 class ActiveUser extends StatelessWidget {
-  const ActiveUser({super.key});
+  PostModel user;
+  ActiveUser({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ActiveUser extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(100),
                 child: Image.network(
-                  personimg,
+                  user.profileimg,
                   width: 46,
                   height: 46,
                   fit: BoxFit.cover,
@@ -36,7 +37,7 @@ class ActiveUser extends StatelessWidget {
           ),
           const SizedBox(height: 3),
           TextComp(
-            text: "Akash",
+            text: user.name,
             fontweight: FontWeight.w500,
             size: 13,
           )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter/db/post_data.dart';
 import 'package:social_flutter/utils/app_color.dart';
 import 'package:social_flutter/utils/files.dart';
 import 'package:social_flutter/widgets/active_user.dart';
@@ -37,8 +38,10 @@ class _ChatScreenState extends State<ChatScreen> {
                     // active user
                     Container(
                       color: Colors.white,
+                      width: double.infinity,
                       margin: const EdgeInsets.symmetric(vertical: 3),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(
                             height: 5,
@@ -54,12 +57,14 @@ class _ChatScreenState extends State<ChatScreen> {
                                 physics: const ClampingScrollPhysics(),
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
-                                itemCount: 10,
+                                itemCount: posts.length,
                                 itemBuilder: (context, index) {
                                   if (index == 0) {
                                     return addComp();
                                   }
-                                  return const ActiveUser();
+                                  return ActiveUser(
+                                    user: posts[index],
+                                  );
                                 },
                               ),
                             ),
@@ -75,9 +80,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     ListView.builder(
                       physics: const ClampingScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 4,
+                      itemCount: posts.length,
                       itemBuilder: (context, index) {
-                        return chatprofile();
+                        return chatprofile(data: posts[index]);
                       },
                     ),
                   ],
