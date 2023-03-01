@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter/db/post_data.dart';
 import 'package:social_flutter/widgets/appbar.dart';
 import 'package:social_flutter/widgets/custome_button.dart';
 import 'package:social_flutter/widgets/notify.dart';
@@ -42,11 +43,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   Container(
                     color: Colors.white,
                     child: ListView.builder(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
-                        itemCount: 6,
+                        itemCount: posts.length,
                         itemBuilder: (context, index) {
-                          return const NotifyComp();
+                          return NotifyComp(notification: posts[index]);
                         }),
                   )
                 ],
