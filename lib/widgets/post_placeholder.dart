@@ -3,7 +3,8 @@ import 'package:social_flutter/utils/app_color.dart';
 import 'package:social_flutter/utils/files.dart';
 
 class PostPlaceholder extends StatelessWidget {
-  const PostPlaceholder({super.key});
+  Function()? onTap;
+  PostPlaceholder({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +23,17 @@ class PostPlaceholder extends StatelessWidget {
             Stack(
               alignment: AlignmentDirectional.bottomEnd,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.network(
-                    personimg,
-                    width: 50,
-                    height: 50,
-                    fit: BoxFit.cover,
+                // profile image
+                InkWell(
+                  onTap: onTap,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.network(
+                      personimg,
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Container(

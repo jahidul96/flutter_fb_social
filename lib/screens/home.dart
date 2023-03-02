@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_flutter/db/post_data.dart';
 import 'package:social_flutter/db/story_data.dart';
+import 'package:social_flutter/screens/profile.dart';
 import 'package:social_flutter/widgets/post_placeholder.dart';
 
 import 'package:social_flutter/widgets/add_story.dart';
@@ -37,35 +38,36 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const PostPlaceholder(),
+                  PostPlaceholder(
+                    onTap: () {
+                      Navigator.pushNamed(context, Profile.routeName);
+                    },
+                  ),
 
                   // story comp
                   Container(
                     height: 180,
                     margin: const EdgeInsets.only(top: 5),
                     color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        physics: const ClampingScrollPhysics(),
-                        itemCount: storys.length,
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        itemBuilder: (context, index) {
-                          if (index == 0) {
-                            return const AddStory();
-                          }
-                          return Story(
-                            story: storys[index],
-                          );
-                        },
-                      ),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: storys.length,
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      itemBuilder: (context, index) {
+                        if (index == 0) {
+                          return const AddStory();
+                        }
+                        return Story(
+                          story: storys[index],
+                        );
+                      },
                     ),
                   ),
 
                   const SizedBox(height: 5),
-                  
+
                   // posts
                   ListView.builder(
                     shrinkWrap: true,
