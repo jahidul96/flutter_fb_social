@@ -2,7 +2,7 @@
 fb ui not full!!
 you can make it fullstack if you want.
 
-if you want to clone just clone and rin flutter pub get on route folder you are good to go!.
+if you want to clone just clone and run flutter pub get on route folder you are good to go!.
 
 <div style={{
      display: flex,
