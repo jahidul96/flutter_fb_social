@@ -80,7 +80,7 @@ class CustomAppBar extends StatelessWidget {
           child: Icon(
             icon,
             color: Colors.black,
-            size: 25,
+            size: 29,
           ),
         ),
       );
