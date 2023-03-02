@@ -9,39 +9,41 @@ class ActiveUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 10),
-      child: Column(
-        children: [
-          Stack(
-            alignment: AlignmentDirectional.bottomEnd,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.network(
-                  user.profileimg,
-                  width: 46,
-                  height: 46,
-                  fit: BoxFit.cover,
+    return Center(
+      child: Container(
+        margin: const EdgeInsets.only(right: 10),
+        child: Column(
+          children: [
+            Stack(
+              alignment: AlignmentDirectional.bottomEnd,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: Image.network(
+                    user.profileimg,
+                    width: 46,
+                    height: 46,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              Container(
-                width: 10,
-                height: 10,
-                decoration: BoxDecoration(
-                  color: activeColor,
-                  borderRadius: BorderRadius.circular(20),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    color: activeColor,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 3),
-          TextComp(
-            text: user.name,
-            fontweight: FontWeight.w500,
-            size: 13,
-          )
-        ],
+              ],
+            ),
+            const SizedBox(height: 3),
+            TextComp(
+              text: user.name,
+              fontweight: FontWeight.w500,
+              size: 13,
+            )
+          ],
+        ),
       ),
     );
     ;

@@ -25,6 +25,7 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
             setting: true,
           ),
 
+          // products
           Expanded(
             child: GridView.builder(
               shrinkWrap: true,
@@ -34,7 +35,7 @@ class _MarketPlaceScreenState extends State<MarketPlaceScreen> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 10,
-                mainAxisExtent: 240,
+                mainAxisExtent: 220,
               ),
               itemCount: 10,
               itemBuilder: ((context, index) {

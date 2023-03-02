@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:social_flutter/db/post_data.dart';
-import 'package:social_flutter/utils/app_color.dart';
-import 'package:social_flutter/utils/files.dart';
 import 'package:social_flutter/widgets/active_user.dart';
 import 'package:social_flutter/widgets/appbar.dart';
 import 'package:social_flutter/widgets/chat_profile.dart';
@@ -68,9 +66,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                 },
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 5,
                           ),
                         ],
                       ),

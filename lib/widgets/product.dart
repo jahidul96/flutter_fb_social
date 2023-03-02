@@ -13,7 +13,8 @@ class ProductItem extends StatelessWidget {
         Image.network(
           personimg,
           fit: BoxFit.cover,
-          height: 170,
+          width: double.infinity,
+          height: 160,
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
