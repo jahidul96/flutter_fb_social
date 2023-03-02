@@ -1,16 +1,26 @@
-# social_flutter
 
-A new Flutter project.
+fb ui not full!!
+you can make it fullstack if you want.
 
-## Getting Started
+if you want to clone just clone and rin flutter pub get on route folder you are good to go!.
 
-This project is a starting point for a Flutter application.
+<div style={{
+     display: flex,
+     align-items: center
+     }}>
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-32-03-62.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-02-28-19-26-41-90.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-32-09-23.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-32-14-09.png" width="200" height="400" />
 
-A few resources to get you started if this is your first Flutter project:
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<div style={{
+     display: flex,
+     align-items: center
+     }}>
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-32-19-48.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-32-24-32.png" width="200" height="400" />
+<img src="https://github.com/jahidul96/flutter_fb_social/blob/main/assets/screenshots/Screenshot_2023-03-02-18-36-00-42.png" width="200" height="400" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</div>
