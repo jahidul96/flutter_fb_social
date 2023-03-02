@@ -55,14 +55,14 @@ class _ProfileState extends State<Profile> {
                   fit: BoxFit.cover,
                 ),
                 Positioned(
-                  top: coverSize - 50,
+                  top: coverSize - 70,
                   left: 10,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(coverSize / 2),
                     child: Image.network(
                       personimg,
-                      width: 100,
-                      height: 100,
+                      width: 130,
+                      height: 130,
                     ),
                   ),
                 ),

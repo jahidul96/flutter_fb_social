@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_flutter/navigation/bottom_nav.dart';
-import 'package:social_flutter/screens/home.dart';
+import 'package:social_flutter/screens/menu.dart';
 import 'package:social_flutter/screens/profile.dart';
 
 void main() {
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MainPage.routeName: (context) => const MainPage(),
         Profile.routeName: (context) => Profile(),
+        MenuPage.routeName: (context) => const MenuPage(),
       },
       home: const MainPage(),
     );

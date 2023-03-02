@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:social_flutter/screens/menu.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String text;
@@ -42,18 +43,27 @@ class CustomAppBar extends StatelessWidget {
             ),
             Row(
               children: [
-                setting ? IconComp(icon: Icons.settings) : Container(),
+                setting
+                    ? IconComp(icon: Icons.settings, onTap: () {})
+                    : Container(),
 
                 // spacing
                 setting ? const SizedBox(width: 10) : Container(),
 
                 // search icon button
-                IconComp(icon: Icons.search),
+                IconComp(icon: Icons.search, onTap: () {}),
 
                 const SizedBox(width: 8),
 
                 // menu icon button
-                menu ? IconComp(icon: Icons.menu) : Container(),
+                menu
+                    ? IconComp(
+                        icon: Icons.menu,
+                        onTap: () {
+                          Navigator.pushNamed(context, MenuPage.routeName);
+                        },
+                      )
+                    : Container(),
               ],
             )
           ],
@@ -62,12 +72,16 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 
-  Widget IconComp({required IconData icon}) => CircleAvatar(
-        backgroundColor: const Color.fromARGB(255, 231, 226, 226),
-        child: Icon(
-          icon,
-          color: Colors.black,
-          size: 25,
+  Widget IconComp({required IconData icon, required Function()? onTap}) =>
+      InkWell(
+        onTap: onTap,
+        child: CircleAvatar(
+          backgroundColor: const Color.fromARGB(255, 231, 226, 226),
+          child: Icon(
+            icon,
+            color: Colors.black,
+            size: 25,
+          ),
         ),
       );
 }
